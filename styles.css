@@ -1,0 +1,72 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator container styling */
+#calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Display styling */
+#display {
+    grid-column: span 4;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #222;
+    color: white;
+}
+
+/* Button styling */
+button {
+    height: 60px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:active {
+    background-color: #666;
+}
+
+/* Special button colors */
+button:nth-child(1), button:nth-child(2) {
+    background-color: #f44336; /* AC and delete button */
+}
+
+button:nth-child(3), button:nth-child(4), 
+button:nth-child(8), button:nth-child(12), 
+button:nth-child(16) {
+    background-color: #ff9800; /* Operator buttons */
+}
+
+button:nth-child(19) {
+    grid-column: span 2; /* Make the 0 button span two columns */
+}
